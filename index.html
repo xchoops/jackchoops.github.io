@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap" rel="stylesheet"> 
+<link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu.css' rel="stylesheet">
+<link href='https://unpkg.com/css.gg@2.0.0/icons/css/close.css' rel="stylesheet">
+ 
+</head>
+<body>
+<section class="header">
+     <nav>
+        <a href="index.html"><img src="images/logo.png"></a>
+        <div class="nav-links" id="navLinks">
+          <i class="gg-close" onclick="hideMenu()"></i> 
+           <ul> 
+              <li><a href="#">HOME</a></li>
+              <li><a href="#pricing">PRICING</a></li>
+              <li><a href="#about">ABOUT</a></li>
+              <li><a href="#cta">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="gg-menu" onclick="showMenu()"></i>
+     </nav>
+  <div class="text-box">
+    <h1>Brandname</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+    <a href="#cta" class="hero-btn"><b>DISCOVER</b></a>
+  </div>
+
+</section>
+
+
+<!------- PRICING ----->
+<section id="pricing" class="pricing">
+  <h1><B>Pricing</B></h1>
+  <p>Lorem ipsum dolor sit amet</p>
+
+  <div class="row">
+    <div class="pricing-col">
+      <h3>Marketing Solutions</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus euismod quis viverra nibh. 
+        Accumsan sit amet nulla facilisi morbi tempus iaculis urna. 
+        Tristique sollicitudin nibh sit amet.</p>
+    </div>  
+    <div class="pricing-col">
+      <h3>Workload Automation</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus euismod quis viverra nibh. 
+          Accumsan sit amet nulla facilisi morbi tempus iaculis urna. 
+          Tristique sollicitudin nibh sit amet.</p>
+    </div>
+    <div class="pricing-col">
+      <h3>Intelligent Support</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus euismod quis viverra nibh. 
+          Accumsan sit amet nulla facilisi morbi tempus iaculis urna. 
+          Tristique sollicitudin nibh sit amet.</p>
+     </div>
+  </div>
+
+</section>
+
+<!------- ABOUT ----->
+<section id="about" class="about">
+  <h1><B>ABOUT</B></h1>
+  <h3>First Header</h3>
+  <div class="row">
+    <div class="about-col">
+      <img src="images/london.png">
+      <div class="layer">
+        <h3>PROJECTS</h3>
+      </div>
+    </div>
+    <div class="about-col">
+      <img src="images/newyork.png">
+      <div class="layer">
+        <h3>TRUST</h3>
+      </div>
+    </div>
+    <div class="about-col">
+      <img src="images/washington.png">
+      <div class="layer">
+        <h3>TEAM</h3>
+      </div>
+    </div>
+  </div>   
+
+</section>
+
+<!------ Call to Action ----->
+<section id="cta" class="cta">
+  <h1><b>FREE CONSULTATION</b></h1>
+  <h3>Sign up for your <b>free</b> AI implementation consultation call.<br> 
+  <b>Explore and gain an understanding of future prosperities.</b></h3>
+
+  <!-- Create a form to collect user's message -->
+  <form id="emailForm">
+      <label for="recipient"></label><br>
+      <input type="text-recipient" id="recipient" value="jackvdv3@gmail.com" readonly><br>
+      
+      <label for="subject"></label><br>
+      <input type="text" id="subject" placeholder="Email Subject" required><br>
+      
+      <label for="message"></label><br>
+      <textarea id="message" rows="4" cols="50" required></textarea><br>
+      
+      <!-- Submit button will open the default email client -->
+      <input type="submit" class="hero-btn" value="Submit">
+    </div>
+  </form>
+</section>
+
+<script>
+  document.getElementById("emailForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const recipient = document.getElementById("recipient").value;
+      const subject = document.getElementById("subject").value;
+      const message = document.getElementById("message").value;
+
+      const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+      window.location.href = mailtoLink;
+  });
+</script>
+
+
+<!------ JavaScript Toggle Menu ----->
+<script>
+  var navLinks = document.getElementById("navLinks");
+  function showMenu() {
+      navLinks.style.right = "0";
+  }
+  function hideMenu() {
+      navLinks.style.right = "-200px";
+  } 
+</script>
+
+
+
+</body>
+</html>
+
+
